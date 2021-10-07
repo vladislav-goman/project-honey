@@ -5,7 +5,8 @@ const Title = styled.h1`
   color: red;
   font-size: 50px;
 `;
-
-export const Home: React.FC = () => {
+const Home: React.FC = () => {
   return <Title>My page</Title>;
 };
+
+export default Home;
