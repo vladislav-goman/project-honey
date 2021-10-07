@@ -9,6 +9,7 @@
     "lint": "eslint . --ext ts --ext tsx --ext js",
     "test": "jest",
     "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
     "test-all": "npm run lint && npm run type-check && npm run test"
   },
   "husky": {
