@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from './Link';
-import { render } from '@testing-library/react';
+import { render } from '../../../test/test-utils';
 
 describe('Link', () => {
   const title = 'Hello World';

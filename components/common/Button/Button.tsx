@@ -18,9 +18,14 @@ const ButtonElement = styled.button`
   }
 `;
 
-export const Button: React.FC<{ title: string; onClick?: () => void }> = ({
-  title,
-  onClick,
-}) => {
-  return <ButtonElement onClick={onClick}>{title}</ButtonElement>;
+export const Button: React.FC<{
+  title: string;
+  onClick?: () => void;
+  className?: string;
+}> = ({ title, onClick, className }) => {
+  return (
+    <ButtonElement className={className} onClick={onClick}>
+      {title}
+    </ButtonElement>
+  );
 };

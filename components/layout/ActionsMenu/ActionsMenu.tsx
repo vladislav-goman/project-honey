@@ -13,6 +13,10 @@ const ActionsMenuComponent = styled.ul`
   display: flex;
   align-items: center;
   justify-content: center;
+  ${({ theme }) => theme.respondTo.md`
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 1rem;`}
 `;
 
 const StyledActionItem = styled.a`
@@ -20,17 +24,24 @@ const StyledActionItem = styled.a`
   font-size: 12px;
   color: ${({ theme }) => theme.black};
   cursor: pointer;
-  padding: 5px;
+  padding: 5px 10px;
   margin-right: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   transition: ${({ theme }) => theme.midTransition};
+  ${({ theme }) => theme.respondTo.md`
+  margin-right: 0;`}
 
   &:last-of-type {
     margin-right: 0;
   }
+`;
+
+const ActionLabel = styled.li`
+  ${({ theme }) => theme.respondTo.md`
+  display: none`}
 `;
 
 const ActionItem: React.FC<{ href: string; title: string; iconPath: string }> =
@@ -39,7 +50,7 @@ const ActionItem: React.FC<{ href: string; title: string; iconPath: string }> =
       <Link href={href} passHref>
         <StyledActionItem>
           <Image alt={title} src={iconPath} width={20} height={20} />
-          <li>{title}</li>
+          <ActionLabel>{title}</ActionLabel>
         </StyledActionItem>
       </Link>
     );

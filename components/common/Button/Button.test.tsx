@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from './Button';
-import { render, screen } from '@testing-library/react';
+import { render, screen } from '../../../test/test-utils';
 import userEvent from '@testing-library/user-event';
 
 describe('Button', () => {

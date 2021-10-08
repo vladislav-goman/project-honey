@@ -1,5 +1,5 @@
 import { Navigation, NAVIGATION_ARRAY } from './Navigation';
-import { render, screen } from '@testing-library/react';
+import { render, screen } from '../../../test/test-utils';
 
 describe('Navigation', () => {
   it('should render navigation links', () => {

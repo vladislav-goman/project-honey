@@ -1,5 +1,5 @@
 import { ActionsMenu, ACTIONS_ARRAY } from './ActionsMenu';
-import { render, screen } from '@testing-library/react';
+import { render, screen } from '../../../test/test-utils';
 
 describe('ActionsMenu', () => {
   it('should render action menu items', () => {

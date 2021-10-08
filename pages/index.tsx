@@ -1,12 +1,12 @@
 import React from 'react';
-import styled from 'styled-components';
+import { WelcomeSection } from '../components/sections/WelcomeSection';
 
-const Title = styled.h1`
-  color: red;
-  font-size: 50px;
-`;
 const Home: React.FC = () => {
-  return <Title>My page</Title>;
+  return (
+    <>
+      <WelcomeSection />
+    </>
+  );
 };
 
 export default Home;

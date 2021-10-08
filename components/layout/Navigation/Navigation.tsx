@@ -2,7 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
 
-const Nav = styled.nav``;
+const Nav = styled.nav`
+  ${({ theme }) => theme.respondTo.md`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;`}
+`;
 
 const StyledNavItem = styled.a`
   text-decoration: none;
@@ -11,6 +16,8 @@ const StyledNavItem = styled.a`
   padding: 5px 10px;
   margin-right: 25px;
   transition: ${({ theme }) => theme.midTransition};
+  ${({ theme }) => theme.respondTo.md`
+  margin-bottom: .5rem;`}
 
   &:last-of-type {
     margin-right: 0;
