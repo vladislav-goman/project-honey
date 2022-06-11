@@ -4,6 +4,12 @@ export const colors = {
   white: '#FFFFFF',
   black: '#000000',
   mercury: '#E5E5E5',
+  silverChalice: '#A3A3A3',
+};
+
+export const fonts = {
+  montserrat: "'Montserrat', sans-serif",
+  sourceSansPro: "'Source Sans Pro', sans-serif;",
 };
 
 export const breakpoints = {

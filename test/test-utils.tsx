@@ -8,7 +8,9 @@ import {
 import { ThemeProvider } from 'styled-components';
 import { theme } from '../styles/lightTheme';
 
-const AllTheProviders: React.FC = ({ children }) => {
+const AllTheProviders: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => {
   return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
 };
 

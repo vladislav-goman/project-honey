@@ -7,6 +7,7 @@ import { Button } from '../../common/Button';
 import { Navigation } from '../Navigation';
 import { ActionsMenu } from '../ActionsMenu';
 import { HamburgerMenu } from '../../common/HamburgerMenu';
+import catalogueIconPath from '../../../public/icons/catalogue.svg';
 
 const HeaderElement = styled.header`
   padding: 25px 0;
@@ -72,6 +73,10 @@ const StyledNavItem = styled.a`
   }
 `;
 
+const StyledLink = styled.a`
+  text-decoration: none;
+`;
+
 export const Header: React.FC = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const onClickHandler = () => setShowMobileMenu((showMenu) => !showMenu);
@@ -83,10 +88,10 @@ export const Header: React.FC = () => {
           <HeaderElement>
             <Logo />
             <NavigationGroup>
-              <Link href="/catalogue">
-                <a>
-                  <Button title="Каталог" />
-                </a>
+              <Link href="/catalogue" passHref>
+                <StyledLink>
+                  <Button title="Каталог" iconPath={catalogueIconPath} />
+                </StyledLink>
               </Link>
               <StyledNavigation />
             </NavigationGroup>

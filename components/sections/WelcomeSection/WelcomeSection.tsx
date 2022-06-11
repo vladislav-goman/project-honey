@@ -27,7 +27,6 @@ const WelcomeHeader = styled.h1`
   margin-bottom: 50px;
   max-width: 600px;
   text-align: center;
-  color: ${({ theme }) => theme.tuatara};
 
   ${({ theme }) => theme.respondTo.md`
   font-size: 34px;
@@ -56,6 +55,10 @@ const BackgroundImageContainer = styled.div`
   display: none`}
 `;
 
+const StyledLink = styled.a`
+  text-decoration: none;
+`;
+
 export const WelcomeSection: React.FC = () => {
   return (
     <Container>
@@ -67,9 +70,9 @@ export const WelcomeSection: React.FC = () => {
               <Image src={welcomeImage} alt="Натуральный мёд из села Кадымка" />
             </ImageContainer>
             <Link href="/catalogue">
-              <a>
+              <StyledLink>
                 <Button title="Заказать мёд" />
-              </a>
+              </StyledLink>
             </Link>
 
             <BackgroundImageContainer>
